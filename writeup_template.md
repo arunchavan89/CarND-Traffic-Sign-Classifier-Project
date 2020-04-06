@@ -23,6 +23,7 @@ The goals / steps of this project are the following:
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
 [image9]: ./examples/dataset_examples.png "All images"
 [image10]: ./examples/model_architecture.png "model_architecture images"
+[image11]: ./examples/german_dataset_examples.png "All images"
 
 ---
 ### Data Set Summary & Exploration
@@ -94,7 +95,7 @@ In order to achieve the validation Accuracy greater than 0.93, epochs and batch 
 
 #### 1. The following five German traffic signs found on the web and their prediction is obtained by using the network designed.
 Here are five German traffic signs 
-![alt text][image9]
+![alt text][image11]
 
 #### 2. Predictions
 
