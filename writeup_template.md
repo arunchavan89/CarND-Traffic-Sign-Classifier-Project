@@ -102,18 +102,18 @@ Here are five German traffic signs
 * The model predicted 4 out of 5 signs correctly, it's 80.0% accurate on the input images.
 
 #### 3. The top five softmax probabilities of the predictions on the captured images are outputted
-Model's softmax probabilities =  TopKV2(values=array([
-       [ 51.195377 ,   9.223745 ,   8.406162 ,   6.123324 ,   4.549276 ],
-       [ 52.432545 ,  19.051453 ,   4.9050813,  -4.416319 ,  -7.427154 ],
-       [ 28.191183 ,  18.278221 ,  11.604327 ,  10.93316  ,   5.842381 ],
-       [ 53.0951   ,  37.722107 ,  33.656933 ,  33.580917 ,  22.857698 ],
-       [129.80821  ,  73.44286  ,  37.12655  ,  32.33492  ,   6.8059974]],
-      dtype=float32), indices=array([
-       [14, 33, 38,  2, 40],
-       [12, 40,  9, 11,  3],
-       [40,  2, 11, 31, 21],
-       [ 7, 40,  8,  5,  4],
-       [ 4,  1,  0,  5, 40]]))
+* Model's softmax probabilities =  
+    * [ 51.195377 ,   9.223745 ,   8.406162 ,   6.123324 ,   4.549276 ],
+    * [ 52.432545 ,  19.051453 ,   4.9050813,  -4.416319 ,  -7.427154 ],
+    * [ 28.191183 ,  18.278221 ,  11.604327 ,  10.93316  ,   5.842381 ],
+    * [ 53.0951   ,  37.722107 ,  33.656933 ,  33.580917 ,  22.857698 ],
+    * [129.80821  ,  73.44286  ,  37.12655  ,  32.33492  ,   6.8059974]],
+* Indices array =
+    * [14, 33, 38,  2, 40],
+    * [12, 40,  9, 11,  3],
+    * [40,  2, 11, 31, 21],
+    * [ 7, 40,  8,  5,  4],
+    * [ 4,  1,  0,  5, 40]
 
 The above top 5 softmax probabilities shows the certainty of the model's predictions for each of the inut image. The designed model failed to detect the sign 'speed limit 30' because this image may contain less sharp edges after rescaling it to 32 x 32 size. The model is predicting this sign as 'Roundabout Mandatory' may be because of presence of sharp circular edges.  
 
