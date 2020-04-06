@@ -55,6 +55,7 @@ The goals / steps of this project are the following:
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
 [image9]: ./examples/dataset_examples.png "All images"
 [image10]: ./examples/model_architecture.png "model_architecture images"
+[image11]: ./examples/german_dataset_examples.png "All images"
 
 ---
 ### Data Set Summary & Exploration
@@ -126,8 +127,17 @@ In order to achieve the validation Accuracy greater than 0.93, epochs and batch 
 
 #### 1. The following five German traffic signs found on the web and their prediction is obtained by using the network designed.
 Here are five German traffic signs 
-![alt text][image9]
+![alt text][image11]
 
+* From the exploratory visualization of the data set, it is clear that the following signs have only few training data.
+    * Speed limit (20km/hr)
+    * Dangerous curve to the left
+    * Go straight or left
+    * End of no passing 
+    * End of no passing by vehicle over 3.5 metric tons.
+* The above signs have the lowest number of training datasets. This can be a major issue while predicting.
+* Data augmentation can help to create more data. But it is not the best idea, as some classes remain significantly less represented than the others.
+* Training a model with such an extended dataset may make it biased towards predicting overrepresented classes. 
 #### 2. Predictions
 
 * Test Accuracy for five pictures of German traffic signs = 0.80
@@ -148,5 +158,4 @@ Here are five German traffic signs
     * [ 4,  1,  0,  5, 40]
 
 The above top 5 softmax probabilities shows the certainty of the model's predictions for each of the inut image. The designed model failed to detect the sign 'speed limit 30' because this image may contain less sharp edges after rescaling it to 32 x 32 size. The model is predicting this sign as 'Roundabout Mandatory' may be because of presence of sharp circular edges.  
-
 
