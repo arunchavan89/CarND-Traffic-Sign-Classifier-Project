@@ -39,7 +39,7 @@ The goals / steps of this project are the following:
 
 Here is an exploratory visualization of the data set. 
 ![alt text][image9]
-
+![alt text][image1]
 ### Design and Test a Model Architecture
 
 #### 1. Preprocessing Stage
@@ -49,6 +49,7 @@ Here is an exploratory visualization of the data set.
 * Secondly, the images are normalized using formula image = (image - 128)/128
 
 #### 2. Describe the final model architecture.
+![alt text][image10]
 
 The final model consisted of the following layers:
 
@@ -69,7 +70,10 @@ The final model consisted of the following layers:
 | RELU					|												| Activation Function
 | Fully connected				| Input = 84. Output = 43      									|
 
-![alt text][image10]
+A LeNet-5 is a classic Convolutional Network architecture with state-of-the-art results on the GTSRB traffic sign dataset implemented in this paper [Traffic Sign Recognition with Multi-Scale Convolutional Networks](https://scholar.google.es/scholar?q=traffic+sign+recognition+with+multi-scale+convolutional+networks&hl=en&as_sdt=0&as_vis=1&oi=scholart).
+In traditional ConvNets approach, the output of the last stage is fed to a classifier. However this architecture uses the outputs of all the stages and are fed to the classifier. This helps the classifier to use, not only high-level features, which tend to be global, invariant, but also pooled lowlevel features, which tend to be more local, less invariant.
+
+In order to achieve the validation Accuracy greater than 0.93, epochs and batch size are key parameters. By trial and error method, these parameters have set to EPOCHS = 100 and BATCH_SIZE = 128.
 
 #### 3. Description about trained model. 
 * The following parameters are used to tune the performance.
