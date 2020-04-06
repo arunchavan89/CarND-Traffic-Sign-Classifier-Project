@@ -97,6 +97,15 @@ In order to achieve the validation Accuracy greater than 0.93, epochs and batch 
 Here are five German traffic signs 
 ![alt text][image11]
 
+* From the exploratory visualization of the data set, it is clear that the following signs have only few training data.
+    * Speed limit (20km/hr)
+    * Dangerous curve to the left
+    * Go straight or left
+    * End of no passing 
+    * End of no passing by vehicle over 3.5 metric tons.
+* The above signs have the lowest number of training datasets. This can be a major issue while predicting.
+* Data augmentation can help to create more data. But it is not the best idea, as some classes remain significantly less represented than the others.
+* Training a model with such an extended dataset may make it biased towards predicting overrepresented classes. 
 #### 2. Predictions
 
 * Test Accuracy for five pictures of German traffic signs = 0.80
